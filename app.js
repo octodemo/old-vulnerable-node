@@ -43,7 +43,7 @@ app.use(express.static(path.join(__dirname, 'public')));
 app.use(session({
   secret: process.env.SECRET,
   cookie: {
-    secure: false,
+    secure: true,
     maxAge: 99999999999
   }
 }));
