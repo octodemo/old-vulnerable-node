@@ -104,3 +104,8 @@ I took ideas and how to explode it in NodeJS using these references:
 # License
 
 This project is released under license BSD.
+
+# Author
+Made by @austenstone!!
+
+Email: [austenstone@github.com](mailto:austenstone@github.com)
