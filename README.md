@@ -1,4 +1,4 @@
-Vulnerable Node
+Vulnerable Node Project
 ===============
 
 ![Logo](https://raw.githubusercontent.com/cr0hn/vulnerable-node/master/images/logo-small.png)
@@ -104,3 +104,6 @@ I took ideas and how to explode it in NodeJS using these references:
 # License
 
 This project is released under license BSD.
+
+
+Stuff at the bottom
