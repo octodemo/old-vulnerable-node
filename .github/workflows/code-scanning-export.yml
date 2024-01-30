@@ -1,0 +1,17 @@
+name: Code Scanning CSV
+on: workflow_dispatch
+
+jobs:
+  export:
+    runs-on: ubuntu-latest
+    steps:
+    - name: CSV export
+      uses: advanced-security/ghas-to-csv@v3
+      env:
+        GITHUB_PAT: ${{ secrets.PAT }}  # you need to set a PAT
+    - name: Upload CSV
+      uses: actions/upload-artifact@v3
+      with:
+        name: ghas-data
+        path: ${{ github.workspace }}/*.csv
+        if-no-files-found: error
