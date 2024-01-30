@@ -1,0 +1,19 @@
+name: Dependabot Export
+on: workflow_dispatch
+
+jobs:
+  export:
+    runs-on: ubuntu-latest
+    steps:               
+    - name: Export
+      uses: austenstone/security-export@latest
+      with:
+        GITHUB_TOKEN: ${{ secrets.PAT }}
+        org_name: 'octodemo'
+        repo_name: 'vulnerable-node'
+        csv_path: dependabot.csv
+    - name: Upload
+      uses: actions/upload-artifact@v3
+      with:
+         name: Dependabot Export
+         path: dependabot.csv
