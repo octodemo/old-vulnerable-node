@@ -94,3 +94,5 @@ logger4js.info("Building database")
 init_db();
 
 module.exports = app;
+
+hello world
