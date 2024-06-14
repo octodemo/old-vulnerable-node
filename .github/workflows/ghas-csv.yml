@@ -8,12 +8,8 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: CSV export
-        uses: advanced-security/ghas-to-csv@v2
+        uses: advanced-security/ghas-to-csv@v3
         env:
-          GITHUB_PAT: ${{ secrets.PAT }}  # you need to set a PAT
-      - name: Upload CSV
-        uses: actions/upload-artifact@v3
-        with:
-          name: ghas-data
-          path: ${{ github.workspace }}/*.csv
-          if-no-files-found: error
+          GITHUB_PAT: ${{ secrets.PAT }}
+          GITHUB_REPORT_SCOPE: "organization"
+          SCOPE_NAME: "octodemo"
