@@ -10,7 +10,7 @@ jobs:
       - name: CSV export
         uses: advanced-security/ghas-to-csv@v3
         env:
-          GITHUB_PAT: ${{ secrets.PAT }}
+          GITHUB_PAT: ${{ secrets.FPAT }}
           GITHUB_REPORT_SCOPE: "organization"
           SCOPE_NAME: "octodemo"
       - name: Upload CSV
