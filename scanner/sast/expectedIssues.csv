@@ -8,3 +8,5 @@ CWE-352,Cross-Site Request Forgery,app.js,16
 CWE-547,Secret,app.js,44
 CWE-601,Open Redirect,routes/login.js,36
 CWE-614,Secure Attribute Cookie,app.js,46
+asdjasdjaoijsdoisajdiosijoadioadji
+
