@@ -7,8 +7,8 @@ jobs:
     steps:
     - name: CSV export
       uses: advanced-security/ghas-to-csv@v3
-      env:
-        GITHUB_PAT: ${{ secrets.PAT }}  # you need to set a PAT
+      # env:
+      #   GITHUB_PAT: ${{ secrets.PAT }}  # you need to set a PAT
     - name: Upload CSV
       uses: actions/upload-artifact@v3
       with:
