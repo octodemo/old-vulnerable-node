@@ -8,6 +8,7 @@ var logger = require('morgan');
 var cookieParser = require('cookie-parser');
 var bodyParser = require('body-parser');
 var log4js = require("log4js");
+var csrf = require('csurf'); // Added for CSRF protection
 
 var init_db = require('./model/init_db');
 var login = require('./routes/login');
@@ -41,12 +42,14 @@ app.use(bodyParser.urlencoded({ extended: true }));
 app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'public')));
 app.use(session({
-  secret: 'ñasddfilhpaf78h78032h780g780fg780asg780dsbovncubuyvqy',
+  secret: process.env.SESSION_SECRET, // Modified to use environment variable for secret
   cookie: {
-    secure: false,
-    maxAge: 99999999999
+    secure: true, // Modified to enable secure cookies
+    httpOnly: true, // Added to prevent client-side script access to the cookie
+    maxAge: 3600000 // Modified maxAge for cookie expiration
   }
 }));
+app.use(csrf()); // Added CSRF middleware
 
 /*
  * Routes config
