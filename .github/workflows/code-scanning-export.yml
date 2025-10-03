@@ -10,7 +10,7 @@ jobs:
       env:
        GITHUB_PAT: ${{ secrets.PAT }}  # you need to set a PAT
     - name: Upload CSV
-      uses: actions/upload-artifact@v3
+      uses: actions/upload-artifact@v4
       with:
         name: ghas-data
         path: ${{ github.workspace }}/*.csv
