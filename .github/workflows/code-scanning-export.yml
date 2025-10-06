@@ -6,7 +6,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
     - name: CSV export
-      uses: advanced-security/ghas-to-csv@v3
+      uses: advanced-security/ghas-to-csv@id-based-cursors
       env:
        GITHUB_PAT: ${{ secrets.PAT }}  # you need to set a PAT
     - name: Upload CSV
